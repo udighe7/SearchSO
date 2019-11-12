@@ -8,12 +8,7 @@
 
 import Foundation
 
-class SearchResult {
+struct SearchResult {
     let questionIds: [Int]
     let query: String
-    
-    init(questionIds: [Int], query: String) {
-        self.questionIds = questionIds
-        self.query = query
-    }
 }

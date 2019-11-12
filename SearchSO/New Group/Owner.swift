@@ -8,13 +8,8 @@
 
 import Foundation
 
-class Owner {
+struct Owner {
     let ownerId: Int
     let ownerName: String
-    
-    init(id: Int, name: String) {
-        self.ownerId = id
-        self.ownerName = name
-    }
 }
 

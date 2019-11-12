@@ -8,18 +8,10 @@
 
 import Foundation
 
-class Question {
+struct Question {
     let questionId: Int
     let owner: Owner
     let title: String
     var score: Int
     var acceptedAnswerId: Int?
-    
-    init(id: Int, owner: Owner, title: String, score: Int, answerId: Int?) {
-        self.questionId = id
-        self.owner = owner
-        self.title = title
-        self.score = score
-        self.acceptedAnswerId = answerId
-    }
 }
