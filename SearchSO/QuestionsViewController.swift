@@ -12,11 +12,16 @@ class QuestionsViewController: UIViewController {
     
     var questionsToShow: [Question] = []
 
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        searchBar.delegate = self
     }
 
+}
 
+extension QuestionsViewController: UISearchBarDelegate {
+    
 }
 
