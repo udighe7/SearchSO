@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+struct StackOverflowQuestionURL {
+    var query: String
+    var url: URL?
+    
+    init(searchText: String) {
+        self.query = searchText
+        let modifiedQuery = self.query.replacingOccurrences(of: " ", with: "+")
+        guard let url = URL(string:"https://api.stackexchange.com/2.2/search/advanced?order=desc&sort=relevance&q="+modifiedQuery+"%20&site=stackoverflow") else {
+            self.url = nil
+            return
+        }
+        self.url = url
+    }
+}
