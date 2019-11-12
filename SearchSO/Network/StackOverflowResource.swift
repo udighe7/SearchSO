@@ -8,6 +8,11 @@
 
 import Foundation
 
+enum StackOverflowObject{
+    case questions(String)
+    case answer(Int)
+}
+
 struct StackOverflowResource<A> {
     let url: URL
     let parse: (Data) -> A?
