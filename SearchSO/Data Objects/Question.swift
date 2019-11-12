@@ -26,6 +26,6 @@ extension Question: Decodable {
     }
 }
 
-extension Question {
+extension Question: Equatable {
     
 }

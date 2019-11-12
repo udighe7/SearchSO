@@ -73,14 +73,14 @@
 				AA1DEE86237B256800A8FE57 /* Main.storyboard */,
 				AA1DEE89237B256900A8FE57 /* Assets.xcassets */,
 				AA1DEE9D237B2AEE00A8FE57 /* Network */,
-				AA1DEE94237B25F600A8FE57 /* New Group */,
+				AA1DEE94237B25F600A8FE57 /* Data Objects */,
 				AA1DEE8B237B256900A8FE57 /* LaunchScreen.storyboard */,
 				AA1DEE8E237B256900A8FE57 /* Info.plist */,
 			);
 			path = SearchSO;
 			sourceTree = "<group>";
 		};
-		AA1DEE94237B25F600A8FE57 /* New Group */ = {
+		AA1DEE94237B25F600A8FE57 /* Data Objects */ = {
 			isa = PBXGroup;
 			children = (
 				AA1DEE95237B260200A8FE57 /* Owner.swift */,
@@ -88,7 +88,7 @@
 				AA1DEE99237B26CA00A8FE57 /* Answer.swift */,
 				AA1DEE9B237B272700A8FE57 /* SearchResult.swift */,
 			);
-			path = "New Group";
+			path = "Data Objects";
 			sourceTree = "<group>";
 		};
 		AA1DEE9D237B2AEE00A8FE57 /* Network */ = {
