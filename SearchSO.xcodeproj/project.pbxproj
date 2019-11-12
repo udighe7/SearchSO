@@ -16,6 +16,7 @@
 		AA1DEE98237B266D00A8FE57 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1DEE97237B266D00A8FE57 /* Question.swift */; };
 		AA1DEE9A237B26CA00A8FE57 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1DEE99237B26CA00A8FE57 /* Answer.swift */; };
 		AA1DEE9C237B272700A8FE57 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1DEE9B237B272700A8FE57 /* SearchResult.swift */; };
+		AA1DEE9F237B2BAA00A8FE57 /* StackOverflowURLObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1DEE9E237B2BAA00A8FE57 /* StackOverflowURLObjects.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		AA1DEE97237B266D00A8FE57 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		AA1DEE99237B26CA00A8FE57 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		AA1DEE9B237B272700A8FE57 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		AA1DEE9E237B2BAA00A8FE57 /* StackOverflowURLObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackOverflowURLObjects.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				AA1DEE84237B256800A8FE57 /* ViewController.swift */,
 				AA1DEE86237B256800A8FE57 /* Main.storyboard */,
 				AA1DEE89237B256900A8FE57 /* Assets.xcassets */,
+				AA1DEE9D237B2AEE00A8FE57 /* Network */,
 				AA1DEE94237B25F600A8FE57 /* New Group */,
 				AA1DEE8B237B256900A8FE57 /* LaunchScreen.storyboard */,
 				AA1DEE8E237B256900A8FE57 /* Info.plist */,
@@ -82,6 +85,14 @@
 				AA1DEE9B237B272700A8FE57 /* SearchResult.swift */,
 			);
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		AA1DEE9D237B2AEE00A8FE57 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AA1DEE9E237B2BAA00A8FE57 /* StackOverflowURLObjects.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +168,7 @@
 			files = (
 				AA1DEE85237B256800A8FE57 /* ViewController.swift in Sources */,
 				AA1DEE98237B266D00A8FE57 /* Question.swift in Sources */,
+				AA1DEE9F237B2BAA00A8FE57 /* StackOverflowURLObjects.swift in Sources */,
 				AA1DEE9A237B26CA00A8FE57 /* Answer.swift in Sources */,
 				AA1DEE96237B260200A8FE57 /* Owner.swift in Sources */,
 				AA1DEE9C237B272700A8FE57 /* SearchResult.swift in Sources */,
