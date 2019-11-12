@@ -22,3 +22,14 @@ struct StackOverflowQuestionURL {
         self.url = url
     }
 }
+
+struct StackOverflowAnswerURL {
+    var questionId: String
+    var url: URL
+    
+    init(id: Int) {
+        self.questionId = String(id)
+        self.url = URL(string: "https://api.stackexchange.com/2.2/questions/"+self.questionId+"/answers?&site=stackoverflow&filter=withbody")!
+    }
+}
+
