@@ -14,6 +14,8 @@ class QuestionsViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     
+    @IBOutlet weak var questionsTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
@@ -24,4 +26,3 @@ class QuestionsViewController: UIViewController {
 extension QuestionsViewController: UISearchBarDelegate {
     
 }
-
