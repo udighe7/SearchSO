@@ -13,3 +13,9 @@ struct Owner {
     let ownerName: String
 }
 
+extension Owner: Decodable {
+    enum CodingKeys: String, CodingKey {
+        case ownerId = "user_id"
+        case ownerName = "display_name"
+    }
+}

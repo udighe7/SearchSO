@@ -15,3 +15,13 @@ struct Question {
     var score: Int
     var acceptedAnswerId: Int?
 }
+
+extension Question: Decodable {
+    enum CodingKeys: String, CodingKey {
+        case questionId = "question_id"
+        case owner
+        case title
+        case score
+        case acceptedAnswerId = "accepted_answer_id"
+    }
+}

@@ -15,3 +15,13 @@ struct Answer {
     var body: String
     var isAccepted: Bool
 }
+
+extension Answer: Decodable {
+    enum CodingKeys: String, CodingKey {
+        case answerId = "answer_id"
+        case owner
+        case score
+        case body
+        case isAccepted = "is_accepted"
+    }
+}
