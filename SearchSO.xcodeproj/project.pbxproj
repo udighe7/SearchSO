@@ -74,9 +74,9 @@
 			children = (
 				AA1DEE82237B256800A8FE57 /* AppDelegate.swift */,
 				AA1DEE84237B256800A8FE57 /* QuestionsViewController.swift */,
-				AA1DEE86237B256800A8FE57 /* Main.storyboard */,
 				AA1DEEAD237B517400A8FE57 /* AnswerViewController.swift */,
 				AA1DEEAB237B41E100A8FE57 /* CustomTableViewCell.swift */,
+				AA1DEE86237B256800A8FE57 /* Main.storyboard */,
 				AA1DEE89237B256900A8FE57 /* Assets.xcassets */,
 				AA1DEE9D237B2AEE00A8FE57 /* Network */,
 				AA1DEE94237B25F600A8FE57 /* Data Objects */,

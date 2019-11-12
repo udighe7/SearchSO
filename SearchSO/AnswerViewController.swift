@@ -10,9 +10,10 @@ import UIKit
 
 class AnswerViewController: UIViewController {
 
+    var questionId: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
 }

@@ -32,6 +32,15 @@ class QuestionsViewController: UIViewController {
             self.questionsTableView.reloadData();
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DisplayAnswerSegue" {
+            if let indexPath = self.questionsTableView.indexPathForSelectedRow {
+                let controller = segue.destination as! AnswerViewController
+                controller.questionId = self.questionsToShow[indexPath.row].questionId
+            }
+        }
+    }
 
 }
 
