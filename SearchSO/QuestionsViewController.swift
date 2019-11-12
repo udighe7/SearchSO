@@ -18,6 +18,7 @@ class QuestionsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.prefersLargeTitles = true
         searchBar.delegate = self
         questionsTableView.dataSource = self
         questionsTableView.delegate = self
