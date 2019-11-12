@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class QuestionsViewController: UIViewController {
     
     var questionsToShow: [Question] = []
 
