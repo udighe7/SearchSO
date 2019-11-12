@@ -12,3 +12,7 @@ struct SearchResult {
     let questionIds: [Int]
     let query: String
 }
+
+extension SearchResult: Equatable {
+    
+}

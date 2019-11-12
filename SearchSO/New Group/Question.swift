@@ -25,3 +25,7 @@ extension Question: Decodable {
         case acceptedAnswerId = "accepted_answer_id"
     }
 }
+
+extension Question {
+    
+}

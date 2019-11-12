@@ -25,3 +25,7 @@ extension Answer: Decodable {
         case isAccepted = "is_accepted"
     }
 }
+
+extension Answer: Equatable {
+    
+}

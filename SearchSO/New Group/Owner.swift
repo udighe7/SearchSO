@@ -19,3 +19,7 @@ extension Owner: Decodable {
         case ownerName = "display_name"
     }
 }
+
+extension Owner: Equatable {
+    
+}
