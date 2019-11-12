@@ -12,6 +12,10 @@ struct WrapperForQuestionAPI: Decodable {
     let items: [Question]
 }
 
+struct WrapperForAnswerAPI: Decodable {
+    let items: [Answer]
+}
+
 struct CreateStackOverflowObjects {
     var jsonData: Data?
     
@@ -38,6 +42,33 @@ struct CreateStackOverflowObjects {
         }
         else {
             return (nil,nil)
+        }
+    }
+    
+    func createObjectForAnswerAPIResponse() -> Answer? {
+        guard let data = self.jsonData else {
+            return nil
+        }
+        
+        let wrapper = try? JSONDecoder().decode(WrapperForAnswerAPI.self, from: data)
+        var answer: Answer? = nil
+        
+        if let items = wrapper?.items {
+            
+            for item in items{
+                if item.isAccepted {
+                    answer = item
+                }
+            }
+            
+            if answer == nil {
+                answer = items[0]
+            }
+            
+            return answer
+        }
+        else {
+            return nil
         }
     }
 
