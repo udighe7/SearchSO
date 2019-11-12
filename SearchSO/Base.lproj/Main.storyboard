@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search Window-->
+        <!--Search Questions-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="QuestionsViewController" customModule="SearchSO" customModuleProvider="target" sceneMemberID="viewController">
@@ -82,6 +82,7 @@
                                             <outlet property="questionScore" destination="SyU-eq-0n3" id="QWO-Ca-Ug6"/>
                                             <outlet property="questionTitle" destination="ymy-et-CmW" id="Tuf-ZR-gL2"/>
                                             <outlet property="votesText" destination="6hm-5m-tYU" id="tTk-tM-38m"/>
+                                            <segue destination="djH-2c-WDV" kind="show" identifier="DisplayAnswerSegue" id="0z7-65-8oI"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -99,7 +100,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Search Window" id="nbV-Lv-pfu"/>
+                    <navigationItem key="navigationItem" title="Search Questions" id="nbV-Lv-pfu"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="questionsTableView" destination="vc1-2E-N3U" id="VNE-yt-NZX"/>
@@ -109,6 +110,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="992.79999999999995" y="27.436281859070466"/>
+        </scene>
+        <!--Answer View Controller-->
+        <scene sceneID="tep-y8-Hfm">
+            <objects>
+                <viewController id="djH-2c-WDV" customClass="AnswerViewController" customModule="SearchSO" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yWR-Bh-IxY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="FLP-sM-toJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rLa-Ld-Kds" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1820" y="27"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="q37-Oj-xMm">
@@ -126,7 +142,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NkE-Nv-D3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
+            <point key="canvasLocation" x="177" y="27"/>
         </scene>
     </scenes>
 </document>

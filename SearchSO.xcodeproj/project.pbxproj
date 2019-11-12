@@ -20,6 +20,7 @@
 		AA1DEEA7237B33FD00A8FE57 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1DEEA6237B33FD00A8FE57 /* WebService.swift */; };
 		AA1DEEA9237B34A100A8FE57 /* StackOverflowResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1DEEA8237B34A100A8FE57 /* StackOverflowResponse.swift */; };
 		AA1DEEAC237B41E100A8FE57 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1DEEAB237B41E100A8FE57 /* CustomTableViewCell.swift */; };
+		AA1DEEAE237B517400A8FE57 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1DEEAD237B517400A8FE57 /* AnswerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		AA1DEEA6237B33FD00A8FE57 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		AA1DEEA8237B34A100A8FE57 /* StackOverflowResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackOverflowResponse.swift; sourceTree = "<group>"; };
 		AA1DEEAB237B41E100A8FE57 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		AA1DEEAD237B517400A8FE57 /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				AA1DEE82237B256800A8FE57 /* AppDelegate.swift */,
 				AA1DEE84237B256800A8FE57 /* QuestionsViewController.swift */,
 				AA1DEE86237B256800A8FE57 /* Main.storyboard */,
+				AA1DEEAD237B517400A8FE57 /* AnswerViewController.swift */,
 				AA1DEEAB237B41E100A8FE57 /* CustomTableViewCell.swift */,
 				AA1DEE89237B256900A8FE57 /* Assets.xcassets */,
 				AA1DEE9D237B2AEE00A8FE57 /* Network */,
@@ -185,6 +188,7 @@
 				AA1DEE96237B260200A8FE57 /* Owner.swift in Sources */,
 				AA1DEE9C237B272700A8FE57 /* SearchResult.swift in Sources */,
 				AA1DEE83237B256800A8FE57 /* AppDelegate.swift in Sources */,
+				AA1DEEAE237B517400A8FE57 /* AnswerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
