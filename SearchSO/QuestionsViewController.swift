@@ -53,6 +53,10 @@ extension QuestionsViewController: UISearchBarDelegate {
             return
         }
         
+        if searchText == "" {
+            return
+        }
+        
         searchBar.resignFirstResponder()
         
         let questionsResource = StackOverflowResource<StackOverflowQuestionResponse>(getObject: .questions(searchText), parseJSON: { data in
@@ -62,6 +66,9 @@ extension QuestionsViewController: UISearchBarDelegate {
             URLSession.shared.load(questionsResource) { questionsInResponse in
                 if let questions = questionsInResponse?.items {
                     self.updateQuestionsToShow(questions)
+                }
+                else {
+                    self.updateQuestionsToShow([])
                 }
             }
         }
@@ -86,8 +93,9 @@ extension QuestionsViewController: UITableViewDataSource {
         let question = self.questionsToShow[indexPath.row]
         cell.questionTitle?.text = question.title
         cell.questionScore?.text = String(question.score)
-        cell.votesText.text = "Votes"
-        
+        if question.acceptedAnswerId != nil {
+            cell.greenTickImage.image = UIImage(named: "GreenTick")
+        }
         return cell
     }
 }

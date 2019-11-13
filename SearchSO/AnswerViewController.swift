@@ -10,6 +10,12 @@ import UIKit
 
 class AnswerViewController: UIViewController {
 
+    @IBOutlet weak var answerScore: UILabel!
+    @IBOutlet weak var greenTickImage: UIImageView!
+    @IBOutlet weak var ownerId: UILabel!
+    @IBOutlet weak var ownerName: UILabel!
+    @IBOutlet weak var answerBody: UILabel!
+    
     var questionId: Int?
     
     override func viewDidLoad() {
