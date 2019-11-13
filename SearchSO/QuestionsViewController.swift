@@ -49,10 +49,7 @@ extension QuestionsViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
     {
         guard let searchText = searchBar.text else {
-            return
-        }
-        
-        if searchText == "" {
+            print("Empty")
             return
         }
         
@@ -65,9 +62,6 @@ extension QuestionsViewController: UISearchBarDelegate {
             URLSession.shared.load(questionsResource) { questionsInResponse in
                 if let questions = questionsInResponse?.items {
                     self.updateQuestionsToShow(questions)
-                }
-                else {
-                    self.updateQuestionsToShow([])
                 }
             }
         }
@@ -92,10 +86,7 @@ extension QuestionsViewController: UITableViewDataSource {
         let question = self.questionsToShow[indexPath.row]
         cell.questionTitle?.text = question.title
         cell.questionScore?.text = String(question.score)
-        if question.acceptedAnswerId == nil {
-            let tickImage = UIImage(named: "greenTick")
-            cell.greenTick.image = tickImage
-        }
+        cell.votesText.text = "Votes"
         
         return cell
     }

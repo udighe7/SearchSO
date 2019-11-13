@@ -11,7 +11,8 @@ import UIKit
 class CustomTableViewCell: UITableViewCell {
 
     @IBOutlet weak var questionScore: UILabel!
-    @IBOutlet weak var greenTickImage: UIImageView!
+    @IBOutlet weak var votesText: UILabel!
+    @IBOutlet weak var greenTickImage: UIStackView!
     @IBOutlet weak var questionTitle: UILabel!
     
     override func awakeFromNib() {
