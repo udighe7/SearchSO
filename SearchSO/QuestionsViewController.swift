@@ -16,12 +16,17 @@ class QuestionsViewController: UIViewController {
     
     @IBOutlet weak var questionsTableView: UITableView!
     
+    let spinner = UIActivityIndicatorView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.prefersLargeTitles = true
         searchBar.delegate = self
         questionsTableView.dataSource = self
         questionsTableView.delegate = self
+        
+        self.spinner.center = self.view.center
+        self.spinner.style = UIActivityIndicatorView.Style.gray
+        self.view.addSubview(self.spinner)
 
     }
     
@@ -29,7 +34,10 @@ class QuestionsViewController: UIViewController {
         self.questionsToShow.removeAll()
         self.questionsToShow = questions
         DispatchQueue.main.async {
-            self.questionsTableView.reloadData();
+            self.spinner.isHidden = true
+            self.questionsTableView.isHidden = false
+            self.spinner.stopAnimating()
+            self.questionsTableView.reloadData()
         }
     }
     
@@ -58,6 +66,11 @@ extension QuestionsViewController: UISearchBarDelegate {
         }
         
         searchBar.resignFirstResponder()
+        
+        
+        self.spinner.isHidden = false
+        self.questionsTableView.isHidden = true
+        self.spinner.startAnimating()
         
         let questionsResource = StackOverflowResource<StackOverflowQuestionResponse>(getObject: .questions(searchText), parseJSON: { data in
             try? JSONDecoder().decode(StackOverflowQuestionResponse.self, from: data)})
@@ -95,6 +108,9 @@ extension QuestionsViewController: UITableViewDataSource {
         cell.questionScore?.text = String(question.score)
         if question.acceptedAnswerId != nil {
             cell.greenTickImage.image = UIImage(named: "GreenTick")
+        }
+        else {
+            cell.greenTickImage.image = nil
         }
         return cell
     }
