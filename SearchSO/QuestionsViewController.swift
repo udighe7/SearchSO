@@ -16,7 +16,9 @@ class QuestionsViewController: UIViewController {
     
     @IBOutlet weak var questionsTableView: UITableView!
     
-    let spinner = UIActivityIndicatorView()
+    @IBOutlet weak var spinnerView: UIView!
+    
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,19 +26,24 @@ class QuestionsViewController: UIViewController {
         questionsTableView.dataSource = self
         questionsTableView.delegate = self
         
-        self.spinner.center = self.view.center
-        self.spinner.style = UIActivityIndicatorView.Style.gray
-        self.view.addSubview(self.spinner)
-
+        DispatchQueue.main.async {
+            self.spinnerView.layer.cornerRadius = 10
+            self.spinnerView.layer.masksToBounds = true
+            self.spinnerView.backgroundColor = UIColor.black.withAlphaComponent(0.4)
+            self.spinner.hidesWhenStopped = true
+            self.spinner.style = UIActivityIndicatorView.Style.whiteLarge
+        }
     }
     
     func updateQuestionsToShow(_ questions: [Question]) {
         self.questionsToShow.removeAll()
         self.questionsToShow = questions
+        
         DispatchQueue.main.async {
-            self.spinner.isHidden = true
-            self.questionsTableView.isHidden = false
             self.spinner.stopAnimating()
+            self.spinnerView.isHidden = true
+            self.view.isUserInteractionEnabled = true
+            
             self.questionsTableView.reloadData()
         }
     }
@@ -65,12 +72,19 @@ extension QuestionsViewController: UISearchBarDelegate {
             return
         }
         
-        searchBar.resignFirstResponder()
-        
-        
-        self.spinner.isHidden = false
-        self.questionsTableView.isHidden = true
-        self.spinner.startAnimating()
+        DispatchQueue.main.async {
+            searchBar.resignFirstResponder()
+            
+            if self.questionsToShow.count != 0 {
+                let indexPath = IndexPath(row: 0, section: 0)
+                self.questionsTableView.scrollToRow(at: indexPath, at: .top, animated: true)
+            }
+            
+            self.view.isUserInteractionEnabled = false
+            self.spinnerView.isHidden = false
+            self.view.bringSubviewToFront(self.spinnerView)
+            self.spinner.startAnimating()
+        }
         
         let questionsResource = StackOverflowResource<StackOverflowQuestionResponse>(getObject: .questions(searchText), parseJSON: { data in
             try? JSONDecoder().decode(StackOverflowQuestionResponse.self, from: data)})
