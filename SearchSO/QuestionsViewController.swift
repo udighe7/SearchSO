@@ -17,7 +17,6 @@ class QuestionsViewController: UIViewController {
     @IBOutlet weak var questionsTableView: UITableView!
     
     @IBOutlet weak var spinnerView: UIView!
-    
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     override func viewDidLoad() {

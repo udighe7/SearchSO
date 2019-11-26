@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA1116282383A6BE0093E3D8 /* dbUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1116272383A6BE0093E3D8 /* dbUtil.swift */; };
+		AA11162C238501C10093E3D8 /* Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA11162B238501C10093E3D8 /* Table.swift */; };
 		AA1DEE83237B256800A8FE57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1DEE82237B256800A8FE57 /* AppDelegate.swift */; };
 		AA1DEE85237B256800A8FE57 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1DEE84237B256800A8FE57 /* QuestionsViewController.swift */; };
 		AA1DEE88237B256800A8FE57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA1DEE86237B256800A8FE57 /* Main.storyboard */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA1116272383A6BE0093E3D8 /* dbUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dbUtil.swift; sourceTree = "<group>"; };
+		AA11162B238501C10093E3D8 /* Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table.swift; sourceTree = "<group>"; };
 		AA1DEE7F237B256800A8FE57 /* SearchSO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchSO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA1DEE82237B256800A8FE57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA1DEE84237B256800A8FE57 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA1116262383A6A50093E3D8 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				AA1116272383A6BE0093E3D8 /* dbUtil.swift */,
+				AA11162B238501C10093E3D8 /* Table.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		AA1DEE76237B256800A8FE57 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +91,7 @@
 				AA1DEEAB237B41E100A8FE57 /* CustomTableViewCell.swift */,
 				AA1DEE86237B256800A8FE57 /* Main.storyboard */,
 				AA1DEE89237B256900A8FE57 /* Assets.xcassets */,
+				AA1116262383A6A50093E3D8 /* Database */,
 				AA1DEE9D237B2AEE00A8FE57 /* Network */,
 				AA1DEE94237B25F600A8FE57 /* Data Objects */,
 				AA1DEE8B237B256900A8FE57 /* LaunchScreen.storyboard */,
@@ -186,9 +200,11 @@
 				AA1DEE9A237B26CA00A8FE57 /* Answer.swift in Sources */,
 				AA1DEEAC237B41E100A8FE57 /* CustomTableViewCell.swift in Sources */,
 				AA1DEE96237B260200A8FE57 /* Owner.swift in Sources */,
+				AA11162C238501C10093E3D8 /* Table.swift in Sources */,
 				AA1DEE9C237B272700A8FE57 /* SearchResult.swift in Sources */,
 				AA1DEE83237B256800A8FE57 /* AppDelegate.swift in Sources */,
 				AA1DEEAE237B517400A8FE57 /* AnswerViewController.swift in Sources */,
+				AA1116282383A6BE0093E3D8 /* dbUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,7 +353,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 75WN78RS4G;
 				INFOPLIST_FILE = SearchSO/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -356,7 +372,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 75WN78RS4G;
 				INFOPLIST_FILE = SearchSO/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
